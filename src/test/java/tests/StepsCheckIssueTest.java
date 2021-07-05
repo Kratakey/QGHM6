@@ -17,16 +17,16 @@ public class StepsCheckIssueTest extends config.TestBase {
     @Test
     void issueTestWithSteps() {
         step("Open the main page", (s) -> {
-            act.open_page(url);
+            act.openPage(url);
         });
         step("Find "+repository+" repository", (s) -> {
-            act.find_repository(repository);
+            act.findRepository(repository);
         });
         step("Open the Issue tab", (s) -> {
-            act.open_issues_tab();
+            act.openIssuesTab();
         });
         step("Verify Issue number ("+issue_number+")", (s) -> {
-            act.check_issue_number(issue_number);
+            act.checkIssueNumber(issue_number);
         });
     }
 

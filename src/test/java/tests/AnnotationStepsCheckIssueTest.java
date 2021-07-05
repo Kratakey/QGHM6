@@ -22,9 +22,9 @@ public class AnnotationStepsCheckIssueTest extends config.TestBase {
     @Link(name = "Github", value = "https://github.com")
     @DisplayName("Test to verify the Issue ID number")
     void issueTestWithAnnotations() {
-        act.open_page(url);
-        act.find_repository(repository);
-        act.open_issues_tab();
-        act.check_issue_number(issue_number);
+        act.openPage(url);
+        act.findRepository(repository);
+        act.openIssuesTab();
+        act.checkIssueNumber(issue_number);
     }
 }

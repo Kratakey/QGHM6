@@ -9,21 +9,20 @@ import static com.codeborne.selenide.Selenide.open;
 
 
 public class CheckIssuePages {
-    public void open_page(String url) {
+    public void openPage(String url) {
         open(url);
     }
 
-    public void find_repository(String repository) {
-        $(byName("q")).sendKeys(repository);
-        $(byName("q")).submit();
+    public void findRepository(String repository) {
+        $(byName("q")).setValue(repository).submit();
         $(By.linkText(repository)).click();
     }
 
-    public void open_issues_tab() {
+    public void openIssuesTab() {
         $("#js-repo-pjax-container").$(byText("Issues")).click();
     }
 
-    public void check_issue_number(String issue_number) {
+    public void checkIssueNumber(String issue_number) {
         $("#repo-content-pjax-container").$(withText("#" + issue_number)).should(Condition.exist);
     }
 }
